@@ -1,0 +1,41 @@
+import java.io.Serializable;
+
+public class stack{
+
+private String[] data;
+private int top;
+
+public stack(int size){
+data= new String[size];
+top=0;
+}
+public void push (String myData){
+if (top<data.length){
+data[top++]=myData;
+}else{
+//full
+}
+}
+public String pop(){
+if (top>0){
+return data[--top];
+}else{
+return null;
+}
+}
+public static void main (String[]args){
+
+stack stack =new stack(6);
+
+stack.push("Satria");
+stack.push("Rizal");
+stack.push("Yasmin");
+stack.push("Irham");
+stack.push("Haris");
+
+system.out.println(statck.pop());
+system.out.println(statck.pop());
+system.out.println(statck.pop());
+system.out.println(statck.pop());
+system.out.println(statck.pop());
+}
